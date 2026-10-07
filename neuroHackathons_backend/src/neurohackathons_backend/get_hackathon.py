@@ -24,7 +24,7 @@ def get_hackathons(query):
         "page": 3
         }
         headers = {
-        'X-API-KEY': 'ba93c498308084db861cd063064f7c233ec2798f',
+        'X-API-KEY': os.getenv("serperkey"),
         'Content-Type': 'application/json'
         }
         response = requests.request("POST", url, headers=headers, json=payload)
